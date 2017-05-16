@@ -1,0 +1,35 @@
+<div *ngIf="art">
+
+  <div class="picture-container">
+    <div class="picture-block">
+      <img src="{{art.imagePath}}">
+    </div>
+
+    <div class=anot-block>     
+      <div id="main">
+          <div>
+             <h5>Likes {{art.likes}}</h5>
+             <h5>Views {{art.views}}</h5>
+          </div> 
+          <div>
+               <h5>Date of creation</h5>
+             <h5>{{art.dateOfCreation}}</h5>
+          </div>  
+          <div></div>
+          <div>
+            <h5>{{art.owner.userName}}</h5>
+            <h5>{{art.owner.email}}</h5>
+          </div>
+      </div>
+    </div>
+ 
+    <div class=anot-block>
+      <h3>{{art.name}}</h3>
+      <p>{{art.description}}</p>
+    </div>
+    <div class=comment-block>
+      <comment-comp [artId]="art.id"></comment-comp>
+    </div>
+    
+  </div>
+</div>

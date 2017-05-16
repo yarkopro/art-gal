@@ -1,0 +1,40 @@
+.my-flex-container {
+  font-family: "Heebo";
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  min-height: 100%;
+}
+
+.my-flex-block {
+  box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.9);
+  max-width: 33.33%;
+  overflow: hidden;
+  margin-bottom: -6px;
+}
+
+.my-flex-block img:hover {
+  -webkit-filter: brightness(130%);
+  -webkit-filter: contrast(100%);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.holder {
+  position: relative;
+  height: 100%;
+  box-shadow: 10px 0px 40px 10px rgba(0, 0, 0, 0.9);
+  padding: none;
+
+}
+
+img {
+  position: relative;
+  min-height: 90%;
+  width: 100%;
+  -moz-transition: all 1.3s ease-out;
+  -o-transition: all 1.3s ease-out;
+  -webkit-transition: all 1.3s ease-out;
+  -webkit-filter: brightness(80%);
+}

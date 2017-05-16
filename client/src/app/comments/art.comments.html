@@ -1,0 +1,31 @@
+<div class="panel panel-footer" style="background: black">
+  <div class="panel body">
+
+    <!--<form #f="ngForm" (ngSubmit)="addComment(f.value)">-->
+      <p>
+        <textarea #commentmess placeholder="Add a new comentar..." id="1" class="form-control" name="commentMessage" ngModel></textarea>
+      </p>
+      <div class="block1">
+        <button type="submit" (click)="addComment(commentmess.value, author.value);author.value=''; commentmess.value='' " class="btn" style="width: 31%" style="color: black">Add coment</button>
+        <input #author type="text" name="author" class="form-control" style="width: 31%" placeholder="Enter your name" ngModel>
+        <input id="ent_email" type="text"  class="form-control" style="width: 31%" placeholder="Enter your email">
+ 
+        
+      </div>
+    <!--</form>-->
+
+  </div>
+  <div class="panel body">
+    
+    <ul *ngFor="let coments of coments">
+      <div class="panel panel-header">
+        <div class="coment_text">
+          <p class="coment_text">{{coments.commentMessage}}</p>
+          <span class="author_text">{{coments.author}}</span>
+          <span class="author_text">{{coments.dateOfCreation}}</span>
+        </div>
+      </div>
+
+    </ul>
+  </div>
+</div>

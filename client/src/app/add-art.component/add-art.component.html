@@ -1,0 +1,36 @@
+
+  <div class = "horizontal-container">
+
+
+    <div class="mini-image">
+
+      <img src={{newImagePath}} alt="please insert image path into the source field" >
+
+    </div>
+
+    <div class="input-form">
+      <b>Your name</b>
+      <br>
+      <input #owner type="text" size="40" ngModel>
+      <br>
+
+      <b>Name of art</b><br>
+      <input #name type="text"  size="40" >
+
+      <br>
+
+      <b>Source</b><br>
+      <input #imagePath type="text" name ="imagePath" size="40" [(ngModel)]="newImagePath">
+      <br>
+      <b>Description</b><br>
+      <textarea #description name="comment" cols="40" rows="3" ngModel></textarea>
+      <br>
+      <br>
+      <button  class="btn" (click) ="addArt(owner.value, name.value, imagePath.value, description.value)">Add Art</button>
+
+    </div>
+
+
+  </div>
+
+

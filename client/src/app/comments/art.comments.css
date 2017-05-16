@@ -1,0 +1,56 @@
+.item {
+  flex-shrink: 2;
+}
+
+.comentar_int_style {
+  width: 99%;
+
+}
+
+.com_name_email_enter {
+  width: 35%;
+}
+
+.author_text {
+  font-style: italic !important;
+  font-size: 10px !important;
+  color: black !important;
+}
+
+.coment_text {
+  font-size: 15px !important;
+  color: black !important;
+  text-align: left !important;
+}
+
+.date_text {
+  text-align: right;
+  font-style: italic;
+  font-size: 10px;
+}
+
+ul :nth-child(odd) {
+  background: white;
+}
+
+ul :nth-child(even) {
+  background: whitesmoke;
+}
+
+.block1 {
+  display: flex;
+  flex-direction: row;
+  width: 108%
+}
+
+.like_coment {
+  font-style: italic;
+  font-size: 10px;
+  text-align: inherit;
+}
+
+.layer {
+  background: black; /* Цвет фона */
+  color: snow;
+  padding: 20px; /* Поля вокруг текста */
+}

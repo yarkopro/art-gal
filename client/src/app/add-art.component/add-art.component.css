@@ -1,0 +1,34 @@
+
+.horizontal-container{
+  font-family:"Heebo";
+  display:flex;
+  flex-direction:row;
+  color:black;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
+  padding: 20px;
+}
+
+.horizontal-container b{
+ color:white;
+}
+
+.mini-image{
+  padding: 40px;
+  width:50%;
+  color:white;
+
+}
+.input-form{
+  padding: 30px;
+}
+.mini-image img{
+  width: 100%;
+}
+
+textarea{
+  width:100%;
+  color:black;
+}
+form input{
+  color:black;
+}

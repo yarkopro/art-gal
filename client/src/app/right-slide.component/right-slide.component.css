@@ -1,0 +1,69 @@
+
+
+#s-panel{
+
+    position: fixed;
+
+    background: linear-gradient( 0deg, rgba( 0,0,0,0.8), rgba( 10,10,10,0.9));
+    box-shadow:  -8px 9px 5px 0px rgba(0,0,0,0.75);
+    z-index:5;
+    top: 30%;
+    right: -130px;
+    width: 160px;
+    height: 280px;
+    float: left;
+    color:azure;
+
+    -webkit-transition-duration: 1.2s;
+	-moz-transition-duration: 1.2s;
+	-o-transition-duration: 1.2s;
+	transition-duration: 1.2s;
+
+
+}
+#s-panel:hover{
+       background: linear-gradient( 0deg, rgba( 0,0,0,0.8), rgba( 10,10,10,1));
+    right: 0px;
+}
+
+
+
+.tag-container{
+    display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    z-index: 20;
+
+    justify-content:space-between;
+    padding: 10px;
+    padding-right:-5px;
+    justify-content: space-around;
+    align-content: center;
+}
+button.tag {
+    font-size: 12px;
+  border:none;
+    text-decoration: none;
+    color: white;
+    margin:2px;
+    background: linear-gradient( 0deg, rgba( 200, 0, 0,0.4), rgba( 257, 0, 0,0.9));
+
+    padding:0px 9px;
+
+}
+button.tag:hover {
+    /*font-weight: 800;*/
+    /*font-size: 11px;*/
+    color: aliceblue;
+    background: linear-gradient( 0deg, rgba( 220, 0, 0,0.7), rgba( 257, 0, 0,0.9));
+    padding:0px 9px;
+
+}
+button.tag:active{
+    margin:2px;
+    background: linear-gradient( 0deg, rgba( 250, 0, 0,0.7), rgba( 50, 0, 0,0.9));
+    padding:1px 9px;
+
+}
+
+
