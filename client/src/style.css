@@ -8,32 +8,21 @@ body {
 
 .picture-container {
     position: relative;
-    /*margin-top:50px;*/
-
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     color: white;
     align-content: space-around;
-
-    /*background-image:    url(http://www.walldevil.com/wallpapers/a76/background-texture-light-pattern-black-wallpapers.jpg); */
     text-align: center;
-
 }
 
 .picture-block {
-
     background: linear-gradient(90deg, rgba(0, 0, 0.9), rgba(100, 100, 100, 0.9));
-
 }
 
 .picture-block img {
-
-    max-width: 60%;
-    /*margin-top: 30px;*/
-
+    max-width: 25%;
     vertical-align: text-top;
-
 }
 
 .info-block {
@@ -44,14 +33,11 @@ body {
     width: 60%;
     margin: auto;
     align-content: center;
-
     text-align: center;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
-
 }
 
 .side {
-
     font-size: 15px;
     margin: 10px;
     flex-grow: 1;
@@ -74,7 +60,6 @@ body {
     margin: auto;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
     max-height: 200px;
-
 }
 
 .anot-block p {
@@ -92,8 +77,6 @@ body {
     position: relative;
     height: 100%;
     box-shadow: 10px 0px 40px 10px rgba(0, 0, 0, 0.9);
-    padding: none;
-
 }
 
 .block {
