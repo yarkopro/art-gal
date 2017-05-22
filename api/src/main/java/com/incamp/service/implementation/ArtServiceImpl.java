@@ -1,7 +1,7 @@
 package com.incamp.service.implementation;
 
 import com.incamp.entity.Art;
-import com.incamp.provider.ArtProvider;
+import com.incamp.provider.ArtRepository;
 import com.incamp.service.ArtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,39 +11,39 @@ import java.util.List;
 
 @Service
 @Transactional
-public class ArtImpl implements ArtService {
+public class ArtServiceImpl implements ArtService {
 
     @Autowired
-    private ArtProvider artProvider ;
+    private ArtRepository artRepository;
 
     @Override
     public List<Art> findForHomePage() {
-        return artProvider.findAll();
+        return artRepository.findAll();
     }
 
     @Override
     public Art findArtById(int artId) {
-        return artProvider.findOne(artId);
+        return artRepository.findOne(artId);
     }
 
     @Override
     public List<Art> findByOwner(String search) {
-        return artProvider.findByOwner(search);
+        return artRepository.findByOwner(search);
     }
 
     @Override
     public List<Art> findByName(String artName) {
-        return artProvider.findByName(artName);
+        return artRepository.findByName(artName);
     }
 
     @Override
     public List<Art> findByTag(String tagName) {
-        return artProvider.findByTag(tagName);
+        return artRepository.findByTag(tagName);
     }
 
     @Override
     public void addView(int artId) {
-        this.artProvider.addView(artId);
+        this.artRepository.addView(artId);
     }
 
     @Override

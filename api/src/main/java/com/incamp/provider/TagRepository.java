@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TagProvider extends JpaRepository<Tag, Integer>{
+public interface TagRepository extends JpaRepository<Tag, Integer>{
 
     @Query("select t from Tag t")
     List<Tag> getAllTags();
