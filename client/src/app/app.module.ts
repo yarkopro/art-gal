@@ -16,40 +16,53 @@ import {RightSlide} from "./right-slide.component/right-slide.component"
 import {ArtComments} from './comments/art.comments';
 import {ComentsService} from './service/comment.service';
 import {AddArtComponent} from './add-art.component/add-art.component';
-import {ArtObserver} from "./service/art-resources.service";
+import {ArtResources} from "./service/art-resources.service";
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot([
-      {
-        path: 'detail/:artId',
-        component: ArtDetailComponent
-      },
-      {
-        path: 'home',
-        component: HomeComponent
-      },
-      {
-        path: '',
-        redirectTo: '/home',
-        pathMatch: 'full'
-      },
-      {
-        path: 'add-art',
-        component: AddArtComponent
-      }
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        RouterModule.forRoot([
+            {
+                path: 'detail/:artId',
+                component: ArtDetailComponent
+            },
+            {
+                path: 'home',
+                component: HomeComponent
+            },
+            {
+                path: '',
+                redirectTo: '/home',
+                pathMatch: 'full'
+            },
+            {
+                path: 'add-art',
+                component: AddArtComponent
+            }
 
-    ])
-  ],
-  declarations: [
-    AppComponent, ArtComponent, ArtContainer, ArtDetailComponent,
-    HeadBarComponent, LoginField, HomeComponent, ArtComments, Footer, RightSlide,AddArtComponent
-  ],
-  providers: [ArtService, ComentsService,ArtObserver],
-  bootstrap: [AppComponent]
+        ])
+    ],
+    declarations: [
+        AppComponent,
+        ArtComponent,
+        ArtContainer,
+        ArtDetailComponent,
+        HeadBarComponent,
+        LoginField,
+        HomeComponent,
+        ArtComments,
+        Footer,
+        RightSlide,
+        AddArtComponent
+    ],
+    providers: [
+        ArtService,
+        ComentsService,
+        ArtResources
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 

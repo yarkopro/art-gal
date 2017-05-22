@@ -1,19 +1,19 @@
-#footer{
-    padding-top:20px;
+#footer {
+    padding-top: 20px;
     z-index: 10;
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    color:white;
+    color: white;
     justify-content: center;
-    /*background: linear-gradient(0deg, rgba( 0,0,0,1), rgba( 50,55,55,1));*/
     background: black;
 }
-.footer-block{
-    width: 12%;
 
+.footer-block {
+    width: 12%;
 }
-#footer ul{
+
+#footer ul {
     list-style: none;
-    font-size:12px
+    font-size: 12px
 }

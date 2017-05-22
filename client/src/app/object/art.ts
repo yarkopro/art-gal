@@ -16,5 +16,4 @@ export class Art {
     this.imagePath = imagePath;
     this.description = description;
   }
-
 }

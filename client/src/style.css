@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0px 0px;
     font-family: "Heebo";
     background-image: url(http://www.wallpaperscharlie.com/wp-content/uploads/2016/11/Background-Photos-9.jpg);
@@ -6,42 +6,38 @@ body{
 
 }
 
-.picture-container{
+.picture-container {
     position: relative;
     /*margin-top:50px;*/
 
-    display:flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    color:white;
-    align-content:space-around;
+    color: white;
+    align-content: space-around;
 
     /*background-image:    url(http://www.walldevil.com/wallpapers/a76/background-texture-light-pattern-black-wallpapers.jpg); */
     text-align: center;
 
+}
+
+.picture-block {
+
+    background: linear-gradient(90deg, rgba(0, 0, 0.9), rgba(100, 100, 100, 0.9));
 
 }
-.picture-block{
 
-    background: linear-gradient(90deg, rgba( 0,0,0.9), rgba( 100,100,100,0.9));
-
-
-
-
-}
-  .picture-block img{
-
-
+.picture-block img {
 
     max-width: 60%;
-      /*margin-top: 30px;*/
+    /*margin-top: 30px;*/
 
     vertical-align: text-top;
 
 }
 
-.info-block{
-    display:flex;
+.info-block {
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -50,125 +46,106 @@ body{
     align-content: center;
 
     text-align: center;
-     background: linear-gradient( 0deg, rgba( 0,0,0,0.7), rgba( 20,20,20,0.7));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
 
 }
-.side{
+
+.side {
 
     font-size: 15px;
     margin: 10px;
-    flex-grow:1;
+    flex-grow: 1;
     margin-top: 1px;
 }
-.center-info{
-   flex-grow: 5;
+
+.center-info {
+    flex-grow: 5;
     max-width: 60%;
     padding: 10px;
     margin-top: -10px;
 }
-.center-info a.tag{
+
+.center-info a.tag {
     font-size: 11px;
 }
 
-.anot-block{
-    width:60%;
+.anot-block {
+    width: 60%;
     margin: auto;
-    background: linear-gradient( 180deg, rgba( 0,0,0,0.7), rgba( 20,20,20,0.7));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
     max-height: 200px;
 
 }
 
-.anot-block p{
+.anot-block p {
     float: left;
     margin-left: 10px;
 }
-.comment-block{
+
+.comment-block {
     width: 60%;
     margin: auto;
-    background: linear-gradient( 0deg, rgba( 0,0,0,0.7), rgba( 20,20,20,0.7));
-
-
-
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
 }
 
-
-
-
-
-
-
-
-
-
-.holder{
-    position:relative;
-
+.holder {
+    position: relative;
     height: 100%;
-    box-shadow: 10px 0px 40px 10px rgba(0,0,0,0.9);
+    box-shadow: 10px 0px 40px 10px rgba(0, 0, 0, 0.9);
     padding: none;
 
-
 }
 
-.block{
+.block {
     font-family: "Heebo";
-    position:absolute;
-    left:0;
-    bottom:0;
-    right:0;
-    top:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 100%;
     padding-top: -50px;
-
-
-    color :white;
+    color: white;
     -webkit-transition-duration: 0.8s;
-	-moz-transition-duration: 0.8s;
-	-o-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
     font-size: 100%;
-
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     margin: auto;
-
-     background: linear-gradient( 0deg, rgba( 0,0,0,0.7), rgba( 20,20,20,0.7));
-    box-shadow: inset 0 3px 20px rgba(0,0,0,0.9);
-
-}
-.block p{
-    margin-top:0px;
-}
-.holder:hover .block{
-    top:80%;
-
-
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
+    box-shadow: inset 0 3px 20px rgba(0, 0, 0, 0.9);
 }
 
+.block p {
+    margin-top: 0px;
+}
+
+.holder:hover .block {
+    top: 80%;
+}
 
 a.tag {
     font-size: 12px;
-
     text-decoration: none;
     color: white;
-    margin:2px;
-    margin-top:5px;
-    background: linear-gradient( 0deg, rgba( 200, 0, 0,0.4), rgba( 257, 0, 0,0.9));
-
-    padding:0px 9px;
-
+    margin: 2px;
+    margin-top: 5px;
+    background: linear-gradient(0deg, rgba(200, 0, 0, 0.4), rgba(257, 0, 0, 0.9));
+    padding: 0px 9px;
 }
+
 a.tag:hover {
     font-weight: 800;
     font-size: 12px;
     color: aliceblue;
-    background: linear-gradient( 0deg, rgba( 220, 0, 0,0.7), rgba( 257, 0, 0,0.9));
-    padding:0px 9px;
-
+    background: linear-gradient(0deg, rgba(220, 0, 0, 0.7), rgba(257, 0, 0, 0.9));
+    padding: 0px 9px;
 }
-a.tag:active{
-    margin:2px;
-    background: linear-gradient( 0deg, rgba( 250, 0, 0,0.7), rgba( 50, 0, 0,0.9));
-    padding:1px 9px;
 
+a.tag:active {
+    margin: 2px;
+    background: linear-gradient(0deg, rgba(250, 0, 0, 0.7), rgba(50, 0, 0, 0.9));
+    padding: 1px 9px;
 }

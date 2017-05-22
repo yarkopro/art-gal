@@ -16,7 +16,7 @@ public class ArtImpl implements ArtService {
 
     @Override
     public List<Art> findForHomePage() {
-        return artProvider.findForHomePage();
+        return artProvider.findAll();
     }
 
     @Override

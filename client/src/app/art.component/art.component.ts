@@ -11,15 +11,15 @@ export class ArtComponent {
   @Input()
   art: Art;
 
-  constructor(private artService: ArtService) {
-  }
+  constructor(private artService: ArtService) {}
 
   isLiked = false;
 
   addLike() {
     if (this.isLiked) return;
     this.isLiked = true;
-    this.artService.artLike(this.art.id).then(likes => this.art.likes = likes);
+    this.artService.artLike(this.art.id)
+        .then(likes => this.art.likes = likes);
   }  
 }
 

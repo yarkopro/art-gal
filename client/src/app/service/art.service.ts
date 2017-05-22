@@ -10,51 +10,49 @@ import {Observable} from "rxjs";
 @Injectable()
 export class ArtService {
 
-  constructor(private http: Http) {
-  }
+    private apiURI = 'api/';
 
-  getArtsForHomePage(): Observable<Art[]> {
-    return this.http.get(`http://10.0.2.124:8088/`)
-      .map(response => response.json() as Art[]);
-  }
+    constructor(private http: Http) {
+    }
 
-  artLike(id: number): Promise<number> {
-    return this.http.get(`http://10.0.2.124:8088/artLike?artId=${id}`)
-      .toPromise()
-      .then(response => response.json() as number)
-  }
+    getAllArts(): Observable<Art[]> {
+        return this.http.get(this.apiURI)
+            .map(response => response.json() as Art[]);
+    }
 
-  findArtByName(name: string): Observable<Art[]> {
-    return this.http.get(`http://10.0.2.124:8088/findArtByName?artName=${name}`)
-      .map(response => response.json() as Art[]);
-  }
+    findArtByName(name: string): Observable<Art[]> {
+        return this.http.get(this.apiURI + `findArtByName?artName=${name}`)
+            .map(response => response.json() as Art[]);
+    }
 
-  findByTagId(tagId: number): Observable<Art[]> {
-    return this.http.get(`http://10.0.2.124:8088/arts/findByTagId?tagId=${tagId}`)
-      .map(response => response.json() as Art[])
-  }
+    findArtById(id: number): Promise<Art> {
+        return this.http.get(this.apiURI + `findArtById?artId=${id}`)
+            .toPromise().then(response => response.json() as Art)
+    }
 
-  getAllTags(): Promise<Tag[]> {
-    return this.http.get(`http://10.0.2.124:8088/getAllTags`).toPromise().then(response => response.json() as Tag[])
+    findByTagId(tagId: number): Observable<Art[]> {
+        return this.http.get(this.apiURI + `findByTagId?tagId=${tagId}`)
+            .map(response => response.json() as Art[])
+    }
 
-  }
+    getAllTags(): Promise<Tag[]> {
+        return this.http.get(this.apiURI + `/tags`)
+            .toPromise().then(response => response.json() as Tag[])
+    }
 
-  findArtById(id: number): Promise<Art> {
-    return this.http.get(`http://10.0.2.124:8088/findArtById?artId=${id}`)
-      .toPromise()
-      .then(response => response.json() as Art)
-  }
+    addView(id: number): Promise<number> {
+        return this.http.get(this.apiURI + `art/addView?artId=${id}`)
+            .toPromise()
+            .then(response => response.json() as number)
+    }
 
+    artLike(id: number): Promise<number> {
+        return this.http.get(this.apiURI + `artLike?artId=${id}`)
+            .toPromise()
+            .then(response => response.json() as number)
+    }
 
-
-  addView(id: number): Promise<number> {
-    return this.http.get(`http://10.0.2.124:8088/art/addView?artId=${id}`)
-      .toPromise()
-      .then(response => response.json() as number)
-  }
-
-  addArt(art:Art):void {
-   this.http.post(`http://10.0.2.124:8088/addNewArt`, art).subscribe();
-
-  }
+    addArt(art: Art): void {
+        this.http.post(this.apiURI + `/addNewArt`, art).subscribe();
+    }
 }

@@ -1,6 +1,6 @@
 import {Component, trigger, state, style, transition, animate} from '@angular/core';
 import {ArtService} from "../service/art.service";
-import {ArtObserver} from "../service/art-resources.service";
+import {ArtResources} from "../service/art-resources.service";
 import 'rxjs/Rx';
 @Component({
   selector: 'headbar',
@@ -23,7 +23,7 @@ import 'rxjs/Rx';
 
 export class HeadBarComponent {
   constructor(private artService: ArtService,
-              private artObserver: ArtObserver) {
+              private artObserver: ArtResources) {
   }
 
   btnState: string = 'out';
@@ -40,7 +40,7 @@ export class HeadBarComponent {
 
   searchInputKeyUp(){
     if (this.isSearchInputEmpty()){
-      this.artService.getArtsForHomePage().subscribe(res => this.artObserver.next(res));
+      this.artService.getAllArts().subscribe(res => this.artObserver.next(res));
       this.isSearchResultEmpty = false;
     }
   }
