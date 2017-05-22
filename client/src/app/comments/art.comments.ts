@@ -21,12 +21,12 @@ export class ArtComments implements OnInit {
   }
 
   ngOnInit(): void {
-    this.comentsService.get(this.artId).then(comments => this.coments = comments);
+    // this.comentsService.get(this.artId).then(comments => this.coments = comments);
   }
 
   addComment(mess: string, author:string): void {
-    var newComment:Coments = new Coments(author, mess);
-    this.comentsService.addComment(newComment,this.artId).then(result => this.coments.unshift(result
-    ));;
+    var newComment: Coments = new Coments(author, mess);
+    this.comentsService.addComment(newComment, this.artId)
+        .then(result => this.coments.unshift(result));
   }
 }

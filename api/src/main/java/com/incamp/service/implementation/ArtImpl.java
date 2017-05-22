@@ -5,10 +5,12 @@ import com.incamp.provider.ArtProvider;
 import com.incamp.service.ArtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class ArtImpl implements ArtService {
 
     @Autowired
@@ -17,6 +19,11 @@ public class ArtImpl implements ArtService {
     @Override
     public List<Art> findForHomePage() {
         return artProvider.findAll();
+    }
+
+    @Override
+    public Art findArtById(int artId) {
+        return artProvider.findOne(artId);
     }
 
     @Override
@@ -32,6 +39,16 @@ public class ArtImpl implements ArtService {
     @Override
     public List<Art> findByTag(String tagName) {
         return artProvider.findByTag(tagName);
+    }
+
+    @Override
+    public void addView(int artId) {
+        this.artProvider.addView(artId);
+    }
+
+    @Override
+    public void addLike(int artId) {
+        this.addLike(artId);
     }
 }
 

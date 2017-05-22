@@ -33,19 +33,18 @@ export class HeadBarComponent {
   search() {
     this.artService.findArtByName(this.searchKeyWord).subscribe(res => {
       this.artObserver.next(res);
-      console.log(res.length==0);
       (res.length==0) ? this.isSearchResultEmpty = true : this.isSearchResultEmpty = false;
-    })
+    });
   }
 
   searchInputKeyUp(){
-    if (this.isSearchInputEmpty()){
-      this.artService.getAllArts().subscribe(res => this.artObserver.next(res));
+    if (this.isSearchInputEmpty()) {
+      this.artService.getAllArts().then(res => this.artObserver.next(res));
       this.isSearchResultEmpty = false;
     }
   }
 
-  isSearchInputEmpty():boolean{
+  isSearchInputEmpty(): boolean{
     if (this.searchKeyWord==="") return true;
   }
 

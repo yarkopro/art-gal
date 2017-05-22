@@ -19,7 +19,7 @@ export class ArtContainer implements OnInit {
   arts: Art[] = [];
 
   ngOnInit() {
-    this.artService.getAllArts().subscribe(res => this.artObserver.next(res))
+    this.artService.getAllArts().then(res => this.artObserver.next(res))
     this.artObserver.subscribe(arts => this.arts = arts);
   }
 }

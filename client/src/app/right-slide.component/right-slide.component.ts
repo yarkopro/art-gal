@@ -20,7 +20,7 @@ export class RightSlide implements OnInit{
   tags: Tag[] = [];
 
   ngOnInit() {
-    this.artService.getAllTags().then(tags => this.tags = tags);
+    // this.artService.getAllTags().then(tags => this.tags = tags);
   }
 
   searchForTag(tagId:number){

@@ -21,4 +21,8 @@ public class CommentImpl implements CommentService {
         return comments;
     }
 
+    @Override
+    public void addCommentForArt(int artId, Comment comment) {
+
+    }
 }
