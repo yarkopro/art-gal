@@ -1,23 +1,23 @@
 <div class="header-group navbar navbar-inverse navbar-form">
-  <div class="logo-group">
-    <h1><a href="/">ArtGallery</a></h1>
-
+    <div class="logo-group">
+        <span class="logo"[routerLink]="['/home']"> ArtGallery</span>
     </div>
-  <div class="add-art-link ">
-    <button type="button" class="btn" [routerLink]="['/add-art']">Add Art</button>
+    <div class="add-art-link">
+        <button type="button" class="btn" [routerLink]="['/add-art']">Add Art</button>
     </div>
-  <div class="searching-group" aria-label="...">
-    <input [(ngModel)]="searchKeyWord" (keyup)="searchInputKeyUp()" type="text" class="form-control" placeholder="Search">
-    <button (click)="search()" type="button" class="btn">Search</button>
-  </div>
-  <div class = "sign">
-  <log-field [@slideInOut]="btnState"></log-field>
-  <div class="btn-group logging-group" role="group" aria-label="...">
-    <button (click)="toggleLoginField()" type="button" class="btn">Log in</button>
-    <button type="button" class="btn">Sign up</button>
-  </div>
+    <div class="searching-group" aria-label="...">
+        <input [(ngModel)]="searchKeyWord" (keyup)="searchInputKeyUp()" type="text" class="form-control"
+               placeholder="Search">
+        <button (click)="search()" type="button" class="btn">Search</button>
+    </div>
+    <div class="sign">
+        <log-field [@slideInOut]="btnState"></log-field>
+        <div class="btn-group logging-group" role="group" aria-label="...">
+            <button (click)="toggleLoginField()" type="button" class="btn">Log in</button>
+            <button type="button" class="btn">Sign up</button>
+        </div>
     </div>
 </div>
 <div class="no-search-results" *ngIf="isSearchResultEmpty">
-  There no results found up to this search
+    There are no results found up to this search
 </div>

@@ -11,7 +11,7 @@ import {Observable} from "rxjs";
 export class ArtService {
 
     private apiURI = 'api/';
-    private arts = 'arts/'
+    private arts = 'arts/';
     constructor(private http: Http) {
     }
 
@@ -47,7 +47,7 @@ export class ArtService {
     }
 
     artLike(id: number): Promise<number> {
-        return this.http.get(this.apiURI + `addLike?artId=${id}`)
+        return this.http.get(this.apiURI + this.arts + `addLike?artId=${id}`)
             .toPromise()
             .then(response => response.json() as number)
     }

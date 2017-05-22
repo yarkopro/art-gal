@@ -2,9 +2,8 @@
   flex-shrink: 2;
 }
 
-.comentar_int_style {
+.comment {
   width: 99%;
-
 }
 
 .com_name_email_enter {
@@ -23,7 +22,7 @@
   text-align: left !important;
 }
 
-.date_text {
+.date {
   text-align: right;
   font-style: italic;
   font-size: 10px;
@@ -50,7 +49,7 @@ ul :nth-child(even) {
 }
 
 .layer {
-  background: black; /* Цвет фона */
+  background: black;
   color: snow;
-  padding: 20px; /* Поля вокруг текста */
+  padding: 20px;
 }

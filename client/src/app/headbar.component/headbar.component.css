@@ -1,72 +1,73 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css";
 
-body{
+body {
     background-color: #F5EFE6
 }
-.logo-group{
-  color:white;
-  width:50%;
+
+.logo-group {
+    color: white;
+    width: 50%;
 }
-.logo-group h1{
-  font-size:40px;
+
+.logo-group .logo {
+    font-size: 40px;
 }
+
 .header-group {
-  z-index: 200;
+    z-index: 200;
     margin: auto;
     height: 80px;
     width: 100%;
     display: flex;
     align-items: center;
-   -webkit-flex-direction: row;
-   flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
     justify-content: flex-end;
 
     flex-wrap: nowrap;
-  align-content: center;
-   border-top-left-radius: 0;
-   border-top-right-radius: 0;
-   font-style: bold;
+    align-content: center;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-style: bold;
 }
 
-
 .searching-group {
-  display:flex;
-  flex-wrap: nowrap;
-  padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
     margin: 10px;
 }
 
-.logo-group a{
-  color:white;
-}
-.logo-group a:hover{
-  color:white;
-  text-decoration:none;
-}
+/*.logo-group a {*/
+    /*color: white;*/
+/*}*/
 
-.sign{
+/*.logo-group a:hover {*/
+    /*color: white;*/
+    /*text-decoration: none;*/
+/*}*/
 
-  min-width: 150px;
-  display:flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: center;
-}
-.add-art-link{
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+.sign {
+    min-width: 150px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
 }
 
+.add-art-link {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
 
-
-.no-search-results{
+.no-search-results {
     color: white;
-  font-size: 30px;
-  text-align: center;
-  padding-top: 180px;
-  height: 37em;
-  max-height: 403px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 180px;
+    height: 37em;
+    max-height: 403px;
 }
  
