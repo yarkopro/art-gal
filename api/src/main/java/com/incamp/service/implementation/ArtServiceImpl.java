@@ -47,8 +47,14 @@ public class ArtServiceImpl implements ArtService {
     }
 
     @Override
-    public void addLike(int artId) {
-        this.addLike(artId);
+    public int addLike(int artId) {
+        artRepository.addLike(artId);
+        return artRepository.getLikesQuantityByArtId(artId);
+    }
+
+    @Override
+    public void addArt(Art art) {
+        artRepository.save(art);
     }
 }
 

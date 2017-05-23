@@ -18,5 +18,7 @@ public interface ArtService {
 
     void addView(int artId);
 
-    void addLike(int artId);
+    int addLike(int artId);
+
+    void addArt(Art art);
 }

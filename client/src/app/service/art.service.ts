@@ -53,6 +53,6 @@ export class ArtService {
     }
 
     addArt(art: Art): void {
-        this.http.post(this.apiURI + `/addNewArt`, art).subscribe();
+        this.http.post(this.apiURI + this.arts + `add/`, art).subscribe();
     }
 }
