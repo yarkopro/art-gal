@@ -6,14 +6,14 @@
   min-height: 100%;
 }
 
-.my-flex-block {
+.art-item {
   box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.9);
   max-width: 33.33%;
+  height: 40vh;
   overflow: hidden;
-  margin-bottom: -6px;
 }
 
-.my-flex-block img:hover {
+.art-item img:hover {
   -webkit-filter: brightness(130%);
   -webkit-filter: contrast(100%);
   -webkit-transform: scale(1.05);

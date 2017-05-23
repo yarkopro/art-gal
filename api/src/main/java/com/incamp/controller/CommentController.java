@@ -13,15 +13,15 @@ import java.util.List;
 public class CommentController {
 
     @Autowired
-    private CommentService service;
+    private CommentService commentService;
 
     @RequestMapping(value = "/art/{artId}")
     public List<Comment> getCommentsByArts(@PathVariable int artId) {
-        return service.getAllByArtId(artId);
+        return commentService.getAllByArtId(artId);
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public void addCommentForArt(@RequestParam("artId") int artId, @RequestBody Comment comment) {
-
+        commentService.addCommentForArt(artId, comment);
     }
 }

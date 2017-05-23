@@ -1,7 +1,9 @@
 <div class="my-flex-container">
-  <div class="my-flex-block" *ngFor="let art of arts">
+  <div class="art-item" *ngFor="let art of arts">
     <div class="holder">
-      <a [routerLink]="['/detail',art.id]"> <img src="{{art.imagePath}}"></a>
+      <a [routerLink]="['/detail', art.id]">
+        <img src="{{art.imagePath}}">
+      </a>
       <art-component [art]="art"></art-component>
     </div>
   </div>

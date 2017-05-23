@@ -14,12 +14,12 @@ export class ComentsService {
     }
 
     get(artId: number): Promise<Coments[]> {
-        return this.http.get(this.apiURI + `art/${artId}`)
+        return this.http.get(this.apiURI + this.commentsURI + `art/${artId}`)
             .toPromise().then(response => response.json() as Coments[]);
     }
 
-    addComment(comment: Coments, artId: number): Promise<Coments> {
+    addComment(comment: Coments, artId: number): Promise<void> {
         return this.http.post(this.apiURI + this.commentsURI + `add?artId=${artId}`, comment)
-            .toPromise().then(response => response.json() as Coments);
+            .toPromise();
     }
 }
