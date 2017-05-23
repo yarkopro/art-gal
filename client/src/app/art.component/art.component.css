@@ -8,9 +8,9 @@
     padding: -20px;
 
     color: white;
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
     font-size: 100%;
 
     display: flex;
@@ -24,10 +24,6 @@
 
 }
 
-.info-block p {
-    margin-top: 0px;
-}
-
 .holder:hover .info-block {
     top: 80%;
 }
@@ -37,7 +33,7 @@
     flex-grow: 1;
     margin-top: 7px;
     padding-left: 10px;
-    width: 10%;
+    width: 20%;
 }
 
 .left-side span {
@@ -73,6 +69,7 @@
     color: snow;
     display: block;
     float: left;
+    cursor: pointer;
 }
 
 .like_style:hover {

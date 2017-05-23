@@ -12,6 +12,7 @@ body {
 
 .logo-group .logo {
     font-size: 40px;
+    cursor: pointer;
 }
 
 .header-group {
@@ -38,15 +39,6 @@ body {
     padding: 10px;
     margin: 10px;
 }
-
-/*.logo-group a {*/
-    /*color: white;*/
-/*}*/
-
-/*.logo-group a:hover {*/
-    /*color: white;*/
-    /*text-decoration: none;*/
-/*}*/
 
 .sign {
     min-width: 150px;

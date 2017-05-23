@@ -3,18 +3,18 @@
         <span class="logo"[routerLink]="['/home']"> ArtGallery</span>
     </div>
     <div class="add-art-link">
-        <button type="button" class="btn" [routerLink]="['/add-art']">Add Art</button>
+        <button type="button" class="btn btn-default" [routerLink]="['/add-art']">Add Art</button>
     </div>
     <div class="searching-group" aria-label="...">
         <input [(ngModel)]="searchKeyWord" (keyup)="searchInputKeyUp()" type="text" class="form-control"
                placeholder="Search">
-        <button (click)="search()" type="button" class="btn">Search</button>
+        <button (click)="search()" type="button" class="btn btn-default">Search</button>
     </div>
     <div class="sign">
         <log-field [@slideInOut]="btnState"></log-field>
         <div class="btn-group logging-group" role="group" aria-label="...">
-            <button (click)="toggleLoginField()" type="button" class="btn">Log in</button>
-            <button type="button" class="btn">Sign up</button>
+            <button (click)="toggleLoginField()" type="button" class="btn btn-default">Log in</button>
+            <button type="button" class="btn btn-default">Sign up</button>
         </div>
     </div>
 </div>
