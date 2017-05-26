@@ -24,24 +24,10 @@ import {ArtResources} from "./service/art-resources.service";
         FormsModule,
         HttpModule,
         RouterModule.forRoot([
-            {
-                path: 'detail/:artId',
-                component: ArtDetailComponent
-            },
-            {
-                path: 'home',
-                component: HomeComponent
-            },
-            {
-                path: '',
-                redirectTo: '/home',
-                pathMatch: 'full'
-            },
-            {
-                path: 'add-art',
-                component: AddArtComponent
-            }
-
+            {path: 'home', component: HomeComponent},
+            {path: '', redirectTo: 'home', pathMatch: 'full'},
+            {path: 'detail/:artId', component: ArtDetailComponent},
+            {path: 'add-art', component: AddArtComponent}
         ])
     ],
     declarations: [
@@ -65,5 +51,4 @@ import {ArtResources} from "./service/art-resources.service";
     bootstrap: [AppComponent]
 })
 export class AppModule {
-
 }

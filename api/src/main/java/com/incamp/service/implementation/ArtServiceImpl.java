@@ -42,8 +42,9 @@ public class ArtServiceImpl implements ArtService {
     }
 
     @Override
-    public void addView(int artId) {
+    public int addView(int artId) {
         this.artRepository.addView(artId);
+        return this.artRepository.getViewsQuantityByArtId(artId);
     }
 
     @Override

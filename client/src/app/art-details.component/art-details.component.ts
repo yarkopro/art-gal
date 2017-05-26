@@ -5,34 +5,35 @@ import {ArtService} from "../service/art.service";
 
 import 'rxjs/add/operator/switchMap';
 import {Art} from "../object/art";
+import {isNullOrUndefined} from "util";
 
 @Component({
-  moduleId: module.id,
-  selector: 'art-detail-component',
-  templateUrl: './art-detail.component.html',
-  styleUrls: ['art-detail.component.css']
+    moduleId: module.id,
+    selector: 'art-detail-component',
+    templateUrl: './art-detail.component.html',
+    styleUrls: ['art-detail.component.css']
 })
 export class ArtDetailComponent implements OnInit {
 
-  art: Art;
+    art: Art;
 
-  constructor(private route: ActivatedRoute,
-              private location: Location,
-              private artService: ArtService) {
-  }
+    constructor(private route: ActivatedRoute,
+                private artService: ArtService) {
+    }
 
-  ngOnInit(): void {
-    this.route.params
-      .switchMap((params: Params) => this.artService.findArtById(+params['artId']))
-      .subscribe(art => this.art = art);
+    ngOnInit(): void {
+        this.route.params
+            .switchMap((params: Params) => this.artService.findArtById(+params['artId']))
+            .subscribe(art => {this.art = art;this.addView();});
+    }
 
-    this.route.params
-      .subscribe((params: Params) => this.addView(+params['artId']));
-  }
+    canBeDisplayed(): boolean {
+        return !isNullOrUndefined(this.art);
+    }
 
-  addView(artId: number): void {
-    this.artService.addView(artId).then(views => this.art.views = views)
-  }
+    addView(): void {
+        this.artService.addView(this.art.id).then(views => this.art.views = views);
+    }
 }
 
 

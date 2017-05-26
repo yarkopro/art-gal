@@ -16,7 +16,7 @@ public interface ArtService {
 
     List<Art> findByTag(String tagName);
 
-    void addView(int artId);
+    int addView(int artId);
 
     int addLike(int artId);
 

@@ -27,6 +27,9 @@ public interface ArtRepository extends JpaRepository<Art, Integer> {
     @Query("select art.likes from Art art where art.id = ?1")
     int getLikesQuantityByArtId(int artId);
 
+    @Query("select art.views from Art art where art.id = ?1")
+    int getViewsQuantityByArtId(int artId);
+
     @Query("select a from Art a join fetch a.tags t1 where (select t2 from Tag t2 where t2.name = ?1) member of t1")
     List<Art> findByTag(String tagName);
 }

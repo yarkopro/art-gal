@@ -1,5 +1,4 @@
 import {Component, OnInit, Input} from '@angular/core';
-
 import {Coments} from '../object/coments';
 import {ComentsService} from '../service/comment.service';
 
@@ -11,12 +10,10 @@ import {ComentsService} from '../service/comment.service';
   styleUrls: ['art.comments.css']
 })
 export class ArtComments implements OnInit {
-
   @Input()
   artId: number;
-
   coments: Coments[] = [];
- 
+
   constructor(private comentsService: ComentsService) {
   }
 

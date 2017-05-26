@@ -46,7 +46,7 @@ public class ArtController {
     public int addLikeForArt(@RequestParam("artId") int artId) {return artService.addLike(artId);}
 
     @RequestMapping(path = "/addView", method = RequestMethod.GET)
-    public void addViewForArt(@RequestParam("artId") int artId) {artService.addView(artId);}
+    public int addViewForArt(@RequestParam("artId") int artId) {return artService.addView(artId);}
 
     @RequestMapping(path = "/add", method = RequestMethod.POST)
     public void addArt(@RequestBody Art art){
