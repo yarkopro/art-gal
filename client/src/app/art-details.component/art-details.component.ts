@@ -32,9 +32,7 @@ export class ArtDetailComponent implements OnInit {
 
   addView(artId: number): void {
     this.artService.addView(artId).then(views => this.art.views = views)
-
   }
-
 }
 
 

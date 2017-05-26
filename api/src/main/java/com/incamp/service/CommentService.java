@@ -8,4 +8,5 @@ public interface CommentService {
 
     List<Comment> getAllByArtId(int artId);
 
+    void addCommentForArt(int artId, Comment comment);
 }

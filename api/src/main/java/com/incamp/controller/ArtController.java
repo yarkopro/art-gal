@@ -3,7 +3,6 @@ package com.incamp.controller;
 
 import com.incamp.entity.Art;
 import com.incamp.service.ArtService;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +11,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/arts")
 public class ArtController {
 
     @Autowired
@@ -32,8 +32,24 @@ public class ArtController {
         return artService.findByName(artName);
     }
 
+    @RequestMapping(path = "/findById", method = RequestMethod.GET)
+    public Art findArtById(@RequestParam("artId") int artId) {
+        return artService.findArtById(artId);
+    }
+
     @RequestMapping(path = "/findByTagName", method = RequestMethod.GET)
     public List<Art> findByTag(@RequestParam("tagName") String tagName) {
         return artService.findByTag(tagName);
+    }
+
+    @RequestMapping(path = "/addLike", method = RequestMethod.GET)
+    public int addLikeForArt(@RequestParam("artId") int artId) {return artService.addLike(artId);}
+
+    @RequestMapping(path = "/addView", method = RequestMethod.GET)
+    public void addViewForArt(@RequestParam("artId") int artId) {artService.addView(artId);}
+
+    @RequestMapping(path = "/add", method = RequestMethod.POST)
+    public void addArt(@RequestBody Art art){
+        artService.addArt(art);
     }
 }

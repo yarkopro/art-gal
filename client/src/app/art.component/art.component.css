@@ -1,102 +1,97 @@
 
 .info-block {
-  font-family: "Heebo";
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 100%;
-  padding: -20px;
+    font-family: "Heebo";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 100%;
+    padding: -20px;
 
-  color: white;
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  font-size: 100%;
+    color: white;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    font-size: 100%;
 
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
-  box-shadow: inset 0 3px 20px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
+    box-shadow: inset 0 3px 20px rgba(0, 0, 0, 0.9);
 
-}
-
-.info-block p {
-  margin-top: 0px;
 }
 
 .holder:hover .info-block {
-  top: 80%;
+    top: 80%;
 }
 
 .left-side {
-  font-size: 15px;
-  flex-grow: 1;
-  margin-top: 7px;
-  padding-left: 10px;
-  width: 10%;
+    font-size: 15px;
+    flex-grow: 1;
+    margin-top: 7px;
+    padding-left: 10px;
+    width: 20%;
 }
-.left-side span{
-  margin-right:5px;
+
+.left-side span {
+    margin-right: 5px;
 }
 
 .right-side {
-
-  font-size: 13px;
-  flex-grow: 1;
-  margin-top: 7px;
-  padding-left:-25px;
-  width: 20%;
+    font-size: 13px;
+    flex-grow: 1;
+    margin-top: 7px;
+    padding-left: -25px;
+    width: 20%;
 }
 
 .center-info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-grow: 5;
-  width: 70%;
-  max-width: 80%;
-
-  padding: 10px;
-  margin-top: -5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 5;
+    width: 70%;
+    max-width: 80%;
+    padding: 10px;
+    margin-top: -5px;
 }
 
 .center-info a.tag {
-  font-size: 11px;
-  margin: 3px;
-  height: 15px;
+    font-size: 11px;
+    margin: 3px;
+    height: 15px;
 }
 
 .like_style {
-  color: snow;
-  display: block;
-  float: left;
+    color: snow;
+    display: block;
+    float: left;
+    cursor: pointer;
 }
 
 .like_style:hover {
-  color: cornflowerblue;
+    color: cornflowerblue;
 }
 
 .view_style {
-  color: snow;
-  display: block;
-  float: left;
+    color: snow;
+    display: block;
+    float: left;
 }
 
-.my-flex-block {
-  box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.9);
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: -6px;
+.art-item {
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.9);
+    width: 100%;
+    overflow: hidden;
 }
 
-.my-flex-block img:hover {
-  -webkit-filter: brightness(130%);
-  -webkit-filter: contrast(100%);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -o-transform: scale(1.05);
+.art-item img:hover {
+    -webkit-filter: brightness(130%);
+    -webkit-filter: contrast(100%);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }

@@ -3,7 +3,7 @@ import {Art} from "../object/art";
 import {Subject} from "rxjs";
 
 @Injectable()
-export class ArtObserver {
+export class ArtResources {
 
   private artsSubjects: Subject<Art[]>;
 
